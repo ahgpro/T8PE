@@ -1,0 +1,15 @@
+class CreatePosts < ActiveRecord::Migration
+  def change
+    create_table :posts do |t|
+      t.string :title
+      t.text :content
+      t.references :user, index: true, foreign_key: true
+      t.text :synopsis
+      t.string :hashtag
+      t.datetime :created_at
+      t.datetime :updated_at
+
+      t.timestamps null: false
+    end
+  end
+end
