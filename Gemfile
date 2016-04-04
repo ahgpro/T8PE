@@ -10,6 +10,8 @@ gem 'devise'
 gem 'redis'
 gem 'rails_admin'
 gem 'figaro'
+gem 'cloudinary'
+gem 'carrierwave'
 
 gem 'sass-rails'
 gem 'jquery-rails'
