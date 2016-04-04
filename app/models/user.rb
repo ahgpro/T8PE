@@ -7,4 +7,8 @@ class User < ActiveRecord::Base
   has_many :posts, dependent: :destroy
   has_many :favs, dependent: :destroy
   has_many :reviews, dependent: :destroy
+
+  def admin?
+    ["hhuguenin.arnaud@gmail.com"].include? self.email
+  end
 end
