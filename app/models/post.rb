@@ -9,4 +9,6 @@ class Post < ActiveRecord::Base
   # SOUS_CATEGORIES = ["CLASH", "RAP", "LOFI", "BEATS", "TRAP", "ARTISTE", "HOW TO MAKE IT", "HOW IT'S DONE", "TUTO"]
 
   # validates :user_id, presence: true
+
+  mount_uploader :photo, PhotoUploader
 end

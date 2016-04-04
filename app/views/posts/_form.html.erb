@@ -7,6 +7,8 @@
     <%= f.input :content, label: 'Votre article', placeholder: "Tapez ici votre article" %>
     <%= f.input :synopsis, label: 'Synopsis' %>
     <%= f.input :hashtag, label: 'Hashtag' %>
+    <%= f.input :photo %>
+  	<%= f.input :photo_cache, as: :hidden %>
     <%= f.submit "Publier votre article", class: "btn btn-primary text-center" %>
   </p>
 <% end %>
