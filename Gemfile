@@ -8,6 +8,7 @@ gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'redis'
+gem 'rails_admin'
 
 gem 'sass-rails'
 gem 'jquery-rails'
