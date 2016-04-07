@@ -12,6 +12,7 @@ gem 'rails_admin'
 gem 'figaro'
 gem 'cloudinary'
 gem 'carrierwave'
+gem "pundit"
 
 gem 'sass-rails'
 gem 'jquery-rails'
