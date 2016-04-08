@@ -8,7 +8,15 @@ class User < ActiveRecord::Base
   has_many :favs, dependent: :destroy
   has_many :reviews, dependent: :destroy
 
-  def admin?
-    ["hhuguenin.arnaud@gmail.com"].include? self.email
+  # def admin?
+  #     user = user.find(params[:id])
+  #     user.admin = true
+  # end
+  after_create :send_welcome_email
+
+  private
+
+  def send_welcome_email
+    UserMailer.welcome(self).deliver_now
   end
 end

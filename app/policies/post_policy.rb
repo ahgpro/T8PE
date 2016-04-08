@@ -14,19 +14,19 @@ class PostPolicy < ApplicationPolicy
   end 
 
   def update?
-  	user_is_owner? 
+  	user_is_admin? 
   end
 
   def destroy?
-  	user_is_owner?  # tout les users peuvent voir un post
+  	user_is_admin?  # tout les users peuvent voir un post
   end 
 
   private
 
-  def user_is_owner?
+  def user_is_admin?
   	# Seul le owner du post peut le modifier
   	# record => @post
   	# user => current_user
-  	record.user == user
+  	user.admin || record.user == user
   end
 end
