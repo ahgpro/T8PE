@@ -1,0 +1,18 @@
+<%= image_tag @user.picture, class:"img-circle-profile" %>
+
+<% if @user.first_name.blank? %>
+	<strong>Name</strong> : non renseigné
+<% else %>
+	<h3>
+	<%= @user.first_name %>
+	<%= @user.last_name[0].capitalize %>.
+	</h3>
+<% end %>
+
+<%= @user.email %>
+
+<% if current_user == @user %>
+	<%= link_to edit_user_registration_path, class:"btn" do %>
+	<%= t ".profile", default: "Modifier mon profil" %>
+	<% end %>
+<% end %>
